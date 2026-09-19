@@ -52,14 +52,14 @@ function dibujarPersonaje(){
 } 
  
 function moverIzquierda(){ 
-    peronajeX=peronajeX-10; 
+    peronajeX=peronajeX-5; 
     actualizarPantalla(); 
     detectarColision(); 
 } 
  
 //moverDerecha 
 function moverDerecha(){ 
-    peronajeX=peronajeX+10; 
+    peronajeX=peronajeX+5; 
     actualizarPantalla(); 
     detectarColision(); 
 } 
