@@ -1,27 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Caza Estrellas</title>
-  <link rel="stylesheet" href="limones.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Atrapar Limones</title>
+
+  <link rel="stylesheet" href="limones.css">
+
   <script src="utils.js"></script>
- 
 </head>
+
 <body onload="iniciar();">
-  <div class="contenedor">
-    <h1>Atrapar Limones</h1>
-    <p>Si del cielo te caen limones haz unas ricas limonadas </p>
-    <h2>AUTOR:Wilson Tapuy</h2>
-    <canvas id="areaJuego" width="600" height="400"></canvas>
-    <div class="panel">
-      <p>Puntaje: <span id="txtPuntaje">0</span></p>
-      <p>Vidas: <span id="txtVidas">3</span></p>
-    </div>
-    <div class="botones">
-      <button onclick="moverIzquierda();">Izquierda</button>
-      <button onclick="moverDerecha();">Derecha</button>
-      <button onclick="reiniciar();">Reiniciar</button>
-    </div>
-  </div>
+
+  <main class="contenedor">
+
+    <header class="cabecera">
+
+      <div class="placa-titulo">
+
+        <span class="decoracion decoracion-izq">🍃</span>
+
+        <h1>Atrapar Limones</h1>
+
+        <span class="decoracion decoracion-der">🍋</span>
+
+      </div>
+
+      <p class="subtitulo">
+        Si del cielo te caen limones haz unas ricas limonadas
+      </p>
+
+      <h2>AUTOR: Wilson Tapuy</h2>
+
+    </header>
+
+
+    <section class="zona-juego">
+
+      <div class="marco-canvas">
+
+        <div class="borde-interior"></div>
+
+        <canvas
+          id="areaJuego"
+          width="600"
+          height="400">
+        </canvas>
+
+      </div>
+
+
+      <div class="panel">
+
+        <div class="estadistica">
+
+          <span class="icono">🍋</span>
+
+          <div>
+            <small>PUNTAJE</small>
+            <strong id="txtPuntaje">0</strong>
+          </div>
+
+        </div>
+
+
+        <div class="separador"></div>
+
+
+        <div class="estadistica">
+
+          <span class="icono corazon">❤</span>
+
+          <div>
+            <small>VIDAS</small>
+            <strong id="txtVidas">3</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="botones">
+
+        <button
+          class="btn btn-izquierda"
+          onclick="moverIzquierda();">
+
+          <span class="flecha">←</span>
+
+          Izquierda
+
+        </button>
+
+
+        <button
+          class="btn btn-derecha"
+          onclick="moverDerecha();">
+
+          Derecha
+
+          <span class="flecha">→</span>
+
+        </button>
+
+
+        <button
+          class="btn btn-reiniciar"
+          onclick="reiniciar();">
+
+          <span class="reinicio">↻</span>
+
+          Reiniciar
+
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
   <script src="limones.js"></script>
 
 </body>
