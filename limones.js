@@ -10,8 +10,8 @@ imagenLimon.src = "limon.jpg";
  
  
 const ALTURA_SUELO=20; 
-const ALTURA_PERSONAJE=60; 
-const ANCHO_PERSONAJE=40; 
+const ALTURA_PERSONAJE=100; 
+const ANCHO_PERSONAJE=70; 
 const ANCHO_LIMON=20; 
 const ALTURA_LIMON=20; 
  
@@ -124,6 +124,13 @@ function detectarAtrapado(){
         clearInterval(intervalo); 
         alert("GANADOR") 
        } 
+       if (vidas== 0){
+        alert("PERDEDOR !!!SM");
+        clearInterval(intervalo);
+        desaparecerPersonaje();
+       }else{
+        aparecerLimon()
+       }
     } 
 } 
  
@@ -140,7 +147,7 @@ function detectarPiso(){
         mostrarEnSapan("txtVidas",vidas); 
  
         if(vidas==0){ 
-            alert("GAME OVER"); 
+            alert(" PERDEDOR !!!s"); 
             clearInterval(intervalo); 
         }else{ 
             aparecerLimon(); 
@@ -161,4 +168,8 @@ function reiniciar(){
     clearInterval(intervalo); 
  
     iniciar(); 
+}
+
+function desaparecerPersonaje(){
+    ctx.clearRect(personajeY, personajeY, ANCHO_PERSONAJE,ALTURA_PERSONAJE);
 }
